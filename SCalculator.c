@@ -7,7 +7,7 @@ void main()
 	float v1,v2,ans; 	//Declartion for values 
 	char opr; 			//Declartion for opreator
 	printf("Enter your Equation:");
-	scanf("%f %s %f",&v1,&opr,&v2);      //Accepting value from user
+	scanf("%f %c %f",&v1,&opr,&v2);      //Accepting value from user
 	switch(opr)
 	{
 		case'+': ans=v1+v2;    //Addition operation
