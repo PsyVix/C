@@ -3,9 +3,7 @@
 #include<stdlib.h>
 
 void currency();
-void lenght();
-void area();
-void vol();
+void length();
 void weight();
 void temp();
 void speed();
@@ -22,15 +20,13 @@ void main()
         printf("*                                                   *\n");
         printf("*****************************************************\n");
         printf("*                 1.Currency Conversion             *\n");
-        printf("*                 2.Lenght Conversion               *\n");
-        printf("*                 3.Area Conversion                 *\n");
-        printf("*                 4.Volume Conversion               *\n");
-        printf("*                 5.Weight Conversion               *\n");
-        printf("*                 6.Temprature Conversion           *\n");
-        printf("*                 7.Speed Conversion                *\n");
-        printf("*                 8.Pressure Conversion             *\n");
-        printf("*                 9.Power Conversion                *\n");
-        printf("*                 10.Exit                           *\n");
+        printf("*                 2.Length Conversion               *\n");
+        printf("*                 3.Weight Conversion               *\n");
+        printf("*                 4.Temprature Conversion           *\n");
+        printf("*                 5.Speed Conversion                *\n");
+        printf("*                 6.Pressure Conversion             *\n");
+        printf("*                 7.Power Conversion                *\n");
+        printf("*                 8.Exit                            *\n");
         printf("*****************************************************\n");
         printf("Enter Your Choice:");
         scanf("%d",&ch);
@@ -43,23 +39,19 @@ void main()
         {
             case 1:currency();
                     break;
-            case 2:lenght();
+            case 2:length();
                     break;
-            case 3:area();
+            case 3:weight();
                     break;
-            case 4:vol();
+            case 4:temp();
                     break;
-            case 5:weight();
+            case 5:speed();
                     break;
-            case 6:temp();
+            case 6:pressure();
                     break;
-            case 7:speed();
+            case 7:power();
                     break;
-            case 8:pressure();
-                    break;
-            case 9:power();
-                    break;
-            case 10:exit(0);
+            case 8:exit(0);
                    break;
             default:printf("Invalid Choice");
             }        
@@ -67,6 +59,8 @@ void main()
 }
 void currency()
 {
+    while(1)
+    {
     float in;
     int c;
     
@@ -123,14 +117,17 @@ void currency()
         scanf("%f", &in);
         printf("US Dollars is: %.3f\n", (in * 1.07)); // Conversion rate from Euro to USD
         break;
-    case 7:
+    case 7:main();
         break;
     default:
         printf("Invalid Choice\n");
     }
+    }
 }
 void length()
 {
+    while(1)
+    {
     float in, out;
     int c;
 
@@ -193,15 +190,18 @@ void length()
         out = in * 1000; // Convert km to meters
         printf("Meters is: %.3f\n", out);
         break;
-    case 7:
+    case 7:main();
         break;
     default:
         printf("Invalid Choice\n");
+    }
     }
 }
 
 void weight()
 {
+    while(1)
+    {
     float in, out;
     int c;
 
@@ -264,14 +264,17 @@ void weight()
         out = in *1000; // Convert km to Tonne(t)s
         printf("Tonne(t)s is: %.3f\n", out);
         break;
-    case 7:
+    case 7:main();
         break;
     default:
         printf("Invalid Choice\n");
     }
+    }
 }
 void temp()
 {
+    while(1)
+    {
     float in, out;
     int c;
 
@@ -334,14 +337,17 @@ void temp()
         out = (in - 273.15) * 9/5 + 32; // Convert km to Farhenhit(F)s
         printf("Farhenhit(F)s is: %.3f\n", out);
         break;
-    case 7:
+    case 7:main();
         break;
     default:
         printf("Invalid Choice\n");
     }
+    }
 }
 void speed()
 {
+    while(1)
+    {
     float in, out;
     int c;
 
@@ -404,15 +410,18 @@ void speed()
         out = in / 1.09728; // Convert ft/s to Km/h
         printf("Kilometer per Hour(Km/h) is: %.3f\n", out);
         break;
-    case 7:
+    case 7:main();
         break;
     default:
         printf("Invalid Choice\n");
     }
+    }
 }
 void pressure()
 {
-        float in, out;
+    while(1)
+    { 
+    float in, out;
     int c;
 
     printf("\t************************************************************************\n");
@@ -474,16 +483,19 @@ void pressure()
         out = in / 14.696; // Convert km to Atmospheres (atm)s
         printf("Atmospheres (atm)s is: %.3f\n", out);
         break;
-    case 7:
+    case 7:main();
         break;
     default:
         printf("Invalid Choice\n");
+    }
     }
 }
 
 void power()
 {
-        float in, out;
+    while(1)
+    {
+    float in, out;
     int c;
 
     printf("\t***************************************************************\n");
@@ -545,10 +557,12 @@ void power()
         out = in *1.3410; // Convert km to Horsepower (hp)s
         printf("Horsepower (hp)s is: %.3f\n", out);
         break;
-    case 7:
+    case 7:main();
         break;
     default:
         printf("Invalid Choice\n");
     }
+  }
 }
+
 
